@@ -30,20 +30,20 @@ const CreatePost: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className="mb-6">
       <input
-        className="border p-2 mr-2"
+        className="border-2 border-gray-300 rounded-full p-2 mr-2"
         placeholder="Title"
         value={title}
         onChange={e => setTitle(e.target.value)}
         required
       />
       <input
-        className="border p-2 mr-2"
+        className="border-2 border-gray-300 rounded-full p-2 mr-2"
         placeholder="Body"
         value={body}
         onChange={e => setBody(e.target.value)}
         required
       />
-      <button className="bg-blue-500 text-white px-4 py-2 rounded" type="submit">
+      <button className="bg-blue-500 text-white tracking-wider text-[12px] px-4 py-2 rounded-full" type="submit">
         {mutation.isPending ? 'Creating...' : 'Create Post'}
       </button>
       {mutation.isError && <p className="text-red-500">Error creating post</p>}
