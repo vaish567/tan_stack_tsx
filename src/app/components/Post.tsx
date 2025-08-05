@@ -11,8 +11,8 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ post }) => (
   <div>
-    <h2 className="font-semibold text-lg mb-2">{post.title}</h2>
-    <p className="text-gray-700 text-sm">{post.body}</p>
+    <h2 className="font-semibold text-[15px] mb-2">{post.title}</h2>
+    <p className="text-gray-500 font-light text-[13px]">{post.body}</p>
   </div>
 );
 

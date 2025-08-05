@@ -67,11 +67,11 @@ export default function PostsPage() {
       <CreatePost />
 
       {/* Posts Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
         {paginatedPosts?.map((post: any) => (
           <div
             key={post.id}
-            className="bg-white shadow-md rounded-lg p-4 border hover:shadow-lg transition"
+            className="bg-white shadow-md rounded-lg p-4 border-2 border-gray-300 hover:shadow-lg transition"
           >
             <Post post={post} />
             <div className="mt-4 flex justify-between">
