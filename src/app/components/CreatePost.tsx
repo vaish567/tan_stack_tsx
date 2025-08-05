@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import endpoints from '../lib/endpoints';
 import { fetchDataPost } from '../lib/fetchData';
+import { showSuccess } from '../utils/toast';
 
 const CreatePost: React.FC = () => {
   const [title, setTitle] = useState('');
@@ -13,6 +14,7 @@ const CreatePost: React.FC = () => {
     return await fetchDataPost(endpoints.posts, newPost);
   },
   onSuccess: () => {
+    showSuccess('Post created successfully!');
     queryClient.invalidateQueries({ queryKey: ['posts'] });
     setTitle('');
     setBody('');
