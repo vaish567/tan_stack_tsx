@@ -10,10 +10,10 @@ interface PostProps {
 }
 
 const Post: React.FC<PostProps> = ({ post }) => (
-  <li className="mb-4">
-    <h2 className="font-semibold">{post.title}</h2>
-    <p>{post.body}</p>
-  </li>
+  <div>
+    <h2 className="font-semibold text-lg mb-2">{post.title}</h2>
+    <p className="text-gray-700 text-sm">{post.body}</p>
+  </div>
 );
 
 export default Post;

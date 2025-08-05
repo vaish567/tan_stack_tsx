@@ -23,7 +23,7 @@ export default function Loading() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center gap-6"
       >
-        <Image src="/skillz.png" alt="Loading..." width={200} height={200} />
+        <Image src="/veefin_logo.jpg" alt="Loading..." width={200} height={200} />
 
         {/* Animated Color-Cycling Dots */}
         <div className="flex gap-2">
